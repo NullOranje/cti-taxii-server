@@ -140,7 +140,7 @@ class Backend(object):
         """
         raise NotImplementedError()
 
-    def add_objects(self, api_root, collection_id, objs):
+    def add_objects(self, api_root, collection_id, objs, request_time):
         """
         Fill:
 
@@ -154,6 +154,7 @@ class Backend(object):
 
             objs (list):  objects to insert into the collection
 
+            request_time (str): timestamp for when the object is added to the collection
         Returns:
 
             status of the request (including):
